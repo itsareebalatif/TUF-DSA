@@ -1,5 +1,5 @@
 def main():
-    arr1 = [2, 2, 1, 1, 1, 2, 2]
+    arr1 = [3,3,4]
     a=majorityElement(arr1)
     print(a)
 
@@ -49,8 +49,8 @@ def majorityElement(arr):
     for i in range(n):
         if arr[i]==element:
             count2+=1
-    if count2>(n//2):
-        return arr[i]
+    if count2>(n/2):
+        return element
     return -1
               
               
