@@ -1,6 +1,6 @@
 def main():
-    arr1 = [2, 2, 1, 1, 1, 2, 2]
-    a=maj_elem_brute(arr1)
+    arr1 = [2, 2, 1, 1, 1, 2, 2,1,1,1]
+    a=maj_ele_better(arr1)
     print(a)
 
 
@@ -16,6 +16,19 @@ def maj_elem_brute(arr):
     return -1            
 
 
+def maj_ele_better(arr):
+    n=len(arr)
+    dic={}
+    for i in arr:
+        if i in dic:
+             dic[i]+=1
+        else:
+             dic[i]=1
+
+    for num,count in dic.items():
+         if count>(n//2):
+              return num         
+    return -1             
 
 
 
