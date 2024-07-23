@@ -1,6 +1,6 @@
 def main():
-    arr1 = [2, 2, 1, 1, 1, 2, 2,1,1,1]
-    a=maj_ele_better(arr1)
+    arr1 = [2, 2, 1, 1, 1, 2, 2]
+    a=majorityElement(arr1)
     print(a)
 
 
@@ -31,6 +31,34 @@ def maj_ele_better(arr):
     return -1             
 
 
+
+def majorityElement(arr):
+    n=len(arr)
+    element=None
+    count1=0
+    for i in range(n):
+        if count1==0:
+            count1=1
+            element=arr[i]
+        elif element==arr[i]:
+            count1+=1
+        else:
+             count1-=1
+    
+    count2=0
+    for i in range(n):
+        if arr[i]==element:
+            count2+=1
+    if count2>(n//2):
+        return arr[i]
+    return -1
+              
+              
+
+             
+             
+              
+     
 
 
 
