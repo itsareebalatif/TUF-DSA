@@ -1,6 +1,6 @@
 def main():
     prices = [7,1,5,3,6,4]
-    a=stock_price(prices)
+    a=optimal_stock_price(prices)
     print(a)
 
 
@@ -17,7 +17,14 @@ def stock_price(arr):
 
 
 
-
+def  optimal_stock_price(arr):
+    minprice=float('inf')
+    maxpro=0
+    n=len(arr)
+    for i in range(n):
+        minprice=min(minprice,arr[i])
+        maxpro=max(maxpro,arr[i]-minprice)
+    return maxpro    
 
 
 
