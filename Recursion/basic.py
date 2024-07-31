@@ -2,7 +2,9 @@ def main():
     
     #name5time(5)
     #Nto0(0,5)
-    NTO0(5)
+    #NTO0(5)
+    #one_N(5)
+    ONE_N(5)
 
     
 def name5time(n):
@@ -29,7 +31,20 @@ def NTO0(N):
     count+=1
     NTO0(N)
 
+count=1
+def one_N(N):
+    global count
+    if count==N:
+        return
+    print(count)
+    count+=1
+    one_N(N)
 
+def ONE_N(N):
+    if N==0:
+        return
+    ONE_N(N-1)
+    print(N-1)
 
 
 if __name__=="__main__":
