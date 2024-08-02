@@ -18,23 +18,6 @@ def leader(arr):
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 def Leader(arr):
     n=len(arr)
     max_element=arr[n-1]

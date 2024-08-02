@@ -45,6 +45,8 @@ def Better_sol(arr):
     
     return longest  
 
+
+
 def optimal(arr):
     n=len(arr)
     if n==0:
@@ -63,10 +65,6 @@ def optimal(arr):
                 cnt+=1
             longest=max(longest,cnt) 
     return longest               
-
-
-                
-
 
 
 
