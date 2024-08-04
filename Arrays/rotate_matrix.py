@@ -1,6 +1,6 @@
 def main():
     A=[[1,2,3],[4,5,6],[7,8,9]]
-    a=rotate(A) 
+    a=trans(A) 
     print(a)
 
 
@@ -32,10 +32,8 @@ def rotate(matrix):
     for i in range(n):
         top, bottom = 0, n - 1
         while top < bottom:
-            matrix[top][i], matrix[bottom][i] = matrix[bottom][i], matrix[top][i]
+            matrix[top][j], matrix[bottom][j] = matrix[bottom][j], matrix[top][j]
             top += 1
-            bottom -= 1 
-
-    return matrix             
+            bottom -= 1      
 if __name__=="__main__":
     main()    

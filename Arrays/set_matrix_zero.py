@@ -2,7 +2,7 @@ def main():
 
     A =[[1, 1, 1,1],         
         [0, 1, 1,1],     
-        [0, 1, 0,1]]   
+        [0, 1, 0,1]]  
  
     #bruteforce(A,3,3)
     a=Optimal(A,3,3)
@@ -48,6 +48,8 @@ def better(matrix,n,m):
 
     return matrix   
 
+
+#OPTIMAL SOLUTION
 def Optimal(matrix,n,m):
     firstrow=False
     firstcol=False
