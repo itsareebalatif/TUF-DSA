@@ -8,9 +8,8 @@ def main():
 def bruteforce(nums,left,right):
     res=[]
     for i in range(len(nums)):
-        
+        summ=0
         for j in range(i,len(nums)):
-            summ=0
             summ+=nums[j]
             res.append(summ)
 
