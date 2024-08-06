@@ -23,16 +23,13 @@ def spiral(matrix):
         colEnd-=1
         
         if rowBegin <= rowEnd:    
-
             for i in range(colEnd,colBegin-1,-1):
                 res.append(matrix[rowEnd][i])
             rowEnd-=1
 
         if colBegin<=colEnd:
-
             for i in range(rowEnd,rowBegin-1,-1):
                 res.append(matrix[i][colBegin])
-
             colBegin+=1  
 
     return res              
