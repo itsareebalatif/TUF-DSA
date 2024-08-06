@@ -1,22 +1,54 @@
+
 def main():
 
-    arr = [1, 3, 2, 4]
-    # 1, 3, 6, 10, 2, 5, 9, 3, 7, 4.
-    a = bruteforce(arr, 6)
+    arr1 = ["d","b","c","b","c","a"]
+
+    a=find_kth_distinct(arr1,2)
     print(a)
 
+def brute(arr,k):
+    n=len(arr)
+    extra=[]
+    
+    for i in range(n):
+        isdistinct=True
+        for j in range(n):
+            if i!=j and arr[i]==arr[j]:
+                isdistinct=False
+                break
+        if isdistinct:
+            extra.append(arr[i])
 
-def bruteforce(nums, k):
-    count = 1
-    for i in range(len(nums)):
-        summ = 0
-        for j in range(i, len(nums)):
-            summ += nums[j]
+    res=extra[k-1]        
 
-        if summ == k:
-            count += 1
-    return count
+    return res          
+
+    
+def find_kth_distinct(arr, k):
+    n = len(arr)
+    
+    for i in range(n):
+        isdistinct = True
+        
+        # Check if arr[i] is a duplicate
+        for j in range(n):
+            if i != j and arr[i] == arr[j]:
+                isdistinct = False
+                break
+        
+        # If it is distinct, decrement k
+        if isdistinct:
+            k -= 1
+            if k == 0:
+                return arr[i]
+    
+    return None     
 
 
-if __name__ == "__main__":
+
+if __name__=="__main__":
     main()
+
+            
+
+         
