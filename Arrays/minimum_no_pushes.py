@@ -1,5 +1,5 @@
 def main():
-    minimumpushes("aabbccddeeffgghhiiiiii")
+    minipress("aabbccddeeffgghhiiiiii")
     
 def minimumpushes(word):
     freq=[0]*26
@@ -26,6 +26,19 @@ def minimumpushes(word):
         iteration+=1
     print(minipress)                
 
+
+#OPTIMAL SOLUTION
+def minipress(word):
+    freq=[0]*32
+    for char in word:
+        index=ord(char)-ord('a')
+        freq[index]+=1
+    freq.sort(reverse=True)
+    press=0
+    for i in range(4):
+        for j in range(8):
+            press+=(i+1)*freq[8*i+j]
+    print(press)            
 
 
 
